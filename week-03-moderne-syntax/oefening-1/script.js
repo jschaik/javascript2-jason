@@ -15,7 +15,7 @@ function calculateArea(breedte, hoogte) {
 
 // Toon het resultaat in de DOM — dit hoef je niet aan te passen:
 document.getElementById('result-area').textContent =
-  'Oppervlak: ' + calculateArea(5, 3);
+  `Oppervlak: ' + ${calculateArea(5, 3)}`
 
 // ------------------------------------------------------------
 //  2. Template literal & arrow function
@@ -41,8 +41,8 @@ document.getElementById('result-sentence').textContent = makeSentence(
 const brands = ['Nike', 'Adidas', 'Dior', 'New Balance'];
 
 function showBrands(brands) {
-  for (let i = 0; i < brands.length; i++) {
-    console.log(brands[i]);
+  for(let brand of brands){
+    console.log(brand)
   }
 }
 
@@ -53,9 +53,10 @@ showBrands(brands);
 
 // Extra: toon ook in de DOM
 const brandsList = document.getElementById('brands-list');
-for (let i = 0; i < brands.length; i++) {
-  brandsList.innerHTML += '<li>' + brands[i] + '</li>';
-}
+
+for(let brand of brands){
+     brandsList.innerHTML += '<li>' + brand + '</li>';
+  }
 
 // ------------------------------------------------------------
 //  4. querySelector & addEventListener
