@@ -6,7 +6,8 @@ const list = document.querySelector('#list');
 const updateTeller = () => {
   const liCounter = document.querySelectorAll('li').length
   console.log(liCounter)
+  console.log('je moeder')
   
 }
 
-updateTeller()
+updateTeller();
